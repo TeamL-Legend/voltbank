@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loginButton) {
         loginButton.addEventListener('click', async () => { // Use async for fetch
 
-            if (BOT_TOKEN === 'YOUR_TELEGRAM_BOT_TOKEN') {
+            if (BOT_TOKEN === '7841076304:AAHgc-4spP6cfl40sBQBEFNZWf0Lb4teMi8') {
                 alert("Ошибка: Пожалуйста, замените 'YOUR_TELEGRAM_BOT_TOKEN' на актуальный токен вашего Telegram бота в файле script.js.");
                 return; // Stop the process if token is not set
             }
