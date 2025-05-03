@@ -1,6 +1,6 @@
 // Define placeholders for configuration - **WARNING: EXPOSING TOKEN CLIENT-SIDE IS INSECURE**
 // For a production application, this logic MUST be handled by a secure backend server.
-const BOT_TOKEN = '7841076304:AAHTKCUUYmuhTIGgPmaE5RVOm3NVb3oeIH0'; // <-- REPLACE WITH YOUR ACTUAL TELEGRAM BOT TOKEN
+const BOT_TOKEN = '7841076304:AAHgc-4spP6cfl40sBQBEFNZWf0Lb4teMi8'; // <-- REPLACE WITH YOUR ACTUAL TELEGRAM BOT TOKEN
 // Find your own Telegram Chat ID using a bot like @userinfobot if needed for testing specific chat_id
 // const YOUR_CHAT_ID = 'YOUR_CHAT_ID_FOR_TESTING';
 
