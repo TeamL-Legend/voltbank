@@ -9,14 +9,15 @@ let targetTelegramId = null; // Variable to store the Telegram ID entered by the
 
 document.addEventListener('DOMContentLoaded', () => {
     // Check if the current page is index.html
-    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
-        // Only schedule the fade-out and redirect if on index.html
+    // Use endsWith('/') for root and endsWith('index.html') for direct access
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
+        // Only schedule the fade-out and redirect if on index.html or site root
         setTimeout(() => {
             document.body.classList.add('fade-out');
 
             // Redirect to main.html after fade-out animation
             setTimeout(() => {
-                window.location.href = 'https://github.com/TeamL-Legend/voltbank/blob/main/main.html';
+                window.location.href = './main.html'; // Use relative path for redirect too
             }, 500); // Match this with CSS transition duration
         }, 3000); // Wait for 3 seconds before starting fade-out
     }
@@ -29,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loginButton) {
         loginButton.addEventListener('click', async () => { // Use async for fetch
 
-            if (BOT_TOKEN === 'YOUR_TELEGRAM_BOT_TOKEN') {
-                alert("Ошибка: Пожалуйста, замените 'YOUR_TELEGRAM_BOT_TOKEN' на актуальный токен вашего Telegram бота в файле script.js.");
+            if (BOT_TOKEN === '7841076304:AAHTKCUUYmuhTIGgPmaE5RVOm3NVb3oeIH0') { // Use the placeholder value for check
+                alert("Ошибка: Пожалуйста, замените '7841076304:AAHTKCUUYmuhTIGgPmaE5RVOm3NVb3oeIH0' на актуальный токен вашего Telegram бота в файле script.js.");
                 return; // Stop the process if token is not set
             }
 
@@ -106,6 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Optional: Check for saved login state... (keep commented out as before)
     }
 
-    // If the current page is main.html, the script does nothing after DOMContentLoaded
+    // If the current page is main.html, the script does nothing after DOMContentLoaded except for the login part
     // The fade-in class is now on the .bank-app div in main.html, handled by CSS animation
 });

@@ -10,15 +10,11 @@ body {
     position: relative;
     padding: 0 10px;
     box-sizing: border-box;
+    background-color: black; 
 }
 
 body.fade-out {
     opacity: 0;
-}
-
-.fade-in {
-    background-color: black;
-    animation: fadeIn 0.5s ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -28,6 +24,14 @@ body.fade-out {
     to {
         opacity: 1;
     }
+}
+
+body.fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+.bank-app.fade-in {
+    animation: fadeIn 0.5s ease-in forwards;
 }
 
 .telegram-welcome {
@@ -89,7 +93,6 @@ body.fade-out {
     z-index: 1;
     width: 100%;
     box-sizing: border-box;
-    animation: fadeIn 0.5s ease-in forwards;
     border-radius: 10px;
     overflow: hidden;
 }
